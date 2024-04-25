@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Analysis</title>
+</head>
+
+<body>
+   
+    <section>
+        
+        <div class="select-1">
+            <h2>Secant Method</h2>
+            <div class="mb-3 w-75 m-auto" id="mo1">
+                <form>
+                    <label for="inputMethod" class="form-label">f(x) = </label>
+                    <input type="text" class="form-control" id="inputMethod" placeholder="f(x)">
+                    <label class="label-1">Xi-1</label>
+                    <input class="inp" id="xiMinus1Text" type="number">
+                    <label class="label-1">Xi</label>
+                    <input class="inp" id="xiText" type="number">
+                    <label class="label-1">Eps</label>
+                    <input class="inp" id="epsText" type="number">
+                    <label class="label-1">Iterr</label>
+                    <input class="inp" id="iterText" type="number">
+                </form>
+              <br>
+                <button onclick="secant(xiMinus1Text.value || 5, xiText.value || 10)" class="btnn">Calculate</button>
+                <button onclick="clearr(['inputMethod', 'xiMinus1Text', 'xiText', 'epsText', 'iterText'])" class="btnn">Clear</button>
+            </div>
+        </div>
+        <!---------------------------------RESULT------------------------------>
+      
+        <div class="select-1" id="resultDiv">
+            <h2>Result</h2>
+            <div class="mb-3 w-75 m-auto">
+                <textarea rows="9" type="textarea" class="form-control" id="resultText"></textarea>
+            </div>
+        </div>
+
+    </section>
+    <script src="../js/main2.js"></script>
+    <script src="../library/math.js"></script>
+</body>
+
+</html>

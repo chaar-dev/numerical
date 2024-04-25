@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Analysis</title>
+</head>
+
+<body>
+   
+    <section>
+       
+        <div class="select-1">
+            <h2>False Position Method</h2>
+            <div class="mb-3 w-75 m-auto" id="mo1">
+                <form>
+                    <label for="inputMethod" class="form-label">F(X) = </label>
+                    <input type="text" class="form-control" id="inputMethod" placeholder="f(x)">
+                    <label class="label-1">XL</label>
+                    <input class="inp" id="xlText" type="number">
+                    <label class="label-1">XU</label>
+                    <input class="inp" id="xuText" type="number">
+                    <label class="label-1">Eps</label>
+                    <input class="inp" id="epsText" type="number">
+                    <label class="label-1" >Iterr</label>
+                    <input class="inp" type="number" id="iterText">
+                </form>
+            <br>
+                <button onclick="falsePosition(xlText.value || 5, xuText.value || 10)" class="btnn">Calculate</button>
+                <button onclick="clearr(['inputMethod', 'xlText', 'xuText', 'epsText', 'iterText'])" class="btnn">Clear</button>
+            </div>
+        </div>
+     
+        <!---------------------------------RESULT------------------------------>
+        <br><br>
+        <div class="select-1" id="resultDiv">
+            <h2>Result</h2>
+            <div class="mb-3 w-75 m-auto">
+                <textarea rows="9" type="textarea" class="form-control" id="resultText"></textarea>
+            </div>
+        </div>
+
+    </section>
+    <script src="../js/main2.js"></script>
+    <script src="../library/math.js"></script>
+</body>
+
+</html>

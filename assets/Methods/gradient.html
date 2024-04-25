@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Analysis</title>
+</head>
+
+<body>
+   
+    <section>
+        
+        <div class="select-1">
+            <h2>Gradiant Method</h2>
+            <div class="mb-3 w-75 m-auto" id="mo1">
+                <form>
+
+                    <label for="inputMethod" class="form-label">F(X, y) = </label>
+                    <input type="text" class="form-control" id="fxy" placeholder="f(x,y)">
+                    <label class="label-1">X:</label>
+                    <input class="inp" id="x" type="number">
+                    <label class="label-1">y:</label>
+                    <input class="inp" id="y" type="number">
+                
+                </form>
+            
+                <button onclick="gradiant(x.value || -1, y.value || 1, fxy.value)" style="margin-top:10px ;" class="btnn">Calculate</button>
+                <button onclick="clearr(['x', 'y', 'fxy'])" class="btnn">Clear</button>
+            </div>
+        </div>
+      
+        <!---------------------------------RESULT------------------------------>
+        <br><br>
+        <div class="select-1" id="resultDiv">
+            <h2>Result</h2>
+            <div class="mb-3 w-75 m-auto">
+                <textarea rows="9" type="textarea" class="form-control" id="resultText"></textarea>
+            </div>
+        </div>
+
+    </section>
+    <script src="../js/main2.js"></script>
+    <script src="../library/math.js"></script>
+</body>
+
+</html>

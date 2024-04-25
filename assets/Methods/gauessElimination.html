@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Analysis</title>
+</head>
+
+<body>
+   
+    <section>
+       
+       
+        <div class="select-1">
+            <h2>Gauessian Elimination</h2>
+            <div class="mb-3 w-75 m-auto" id="mo1">
+                <div class="edit" >
+                    <label for="inputMethod" class="form-label">x1 :</label>
+                    <input id="m00" type="text">
+                    <label for="inputMethod" class="form-label">x2 :</label>
+                    <input id="m01" type="text" > 
+                    <label for="inputMethod" class="form-label">x3 :</label>
+                    <input id="m02" type="text">
+                    <label for="inputMethod" class="form-label">= </label>
+                    <input id="m03" type="text">
+                    
+                    <br>
+                    <label for="inputMethod" class="form-label">x1 :</label>
+                    <input id="m10" type="text" >
+                    <label for="inputMethod" class="form-label">x2 :</label>
+                    <input id="m11" type="text" > 
+                    <label for="inputMethod" class="form-label">x3 :</label>
+                    <input id="m12" type="text" >
+                    <label for="inputMethod" class="form-label">= </label>
+                    <input id="m13" type="text" >
+                    <br>
+                    <label for="inputMethod" class="form-label">x1 :</label>
+                    <input id="m20" type="text" >
+                    <label for="inputMethod" class="form-label">x2 :</label>
+                    <input id="m21" type="text" > 
+                    <label for="inputMethod" class="form-label">x3 :</label>
+                    <input id="m22" type="text" >
+                    <label for="inputMethod" class="form-label">= </label>
+                    <input id="m23" type="text" >
+                    <br>
+                    <button onclick="setup(0)" class="btnn">Calculate</button>
+                    <button id="partialBtn" onclick="partial()" class="btnn">Partial Pivot = OFF</button>
+                </div>
+
+            </div>
+        </div>
+        <br><br>
+        <!---------------------------------RESULT------------------------------>
+        <br><br>
+        <div class="select-1" id="resultDiv">
+            <h2>Result</h2>
+            <div class="mb-3 w-75 m-auto">
+                <textarea rows="9" type="textarea" class="form-control" id="resultText"></textarea>
+            </div>
+        </div>
+
+    </section>
+    <script src="../js/main2.js"></script>
+    <script src="../library/math.js"></script>
+</body>
+
+</html>
